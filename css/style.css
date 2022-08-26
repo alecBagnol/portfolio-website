@@ -42,7 +42,6 @@ body{
 /* HEADER */
 header{
     display: flex;
-    /* position: sticky; */
     position: relative;
     top: 0;
     flex-flow: column nowrap;
@@ -99,16 +98,61 @@ header .contact__links a{
     height: var(--size);
     justify-content: center;
     align-items: center;
-    background-color: var(--cardBgDark);
     border-radius: .5rem;
+    /* background-color: var(--cardBgDark); */
     background-repeat: no-repeat;
     background-position: center;
+}
+header .contact__links a::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cardBgDark);
+    border-radius: .5rem;
+    z-index: -1;
+}
+header .contact__links a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+}
+header .contact__links a:hover::after{
+    opacity: 1;
+}
+
+header .contact__links .github::after{
+    background: linear-gradient(to right, #7A2F9F, #6259C8);
+}
+header .contact__links .linkedin::after{
+    background: linear-gradient(to right, #064079, #0A66C2);
+}
+header .contact__links .email::after{
+    background: linear-gradient(to right, #BB201D, #DE4032);
+}
+header .contact__links .twitter::after{
+    background: linear-gradient(to right, #1C93E4, #30C2F2);
+}
+header .contact__links .leetcode::after{
+    background: linear-gradient(to right, #8b5a0f, #EB971A);
 }
 header .contact__links a object{
     width: 4em;
     height: 4em;
     pointer-events: none;
 }
+
 header ul li{
     list-style: none;
 }
@@ -186,6 +230,13 @@ main .projects__item picture img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+main .projects__item.site picture img{
+    object-position: 100% 100%;
+    transition: all .8s ease-in-out;
+}
+main .projects__item.site:hover picture img{
+    object-position: 100% 0;
 }
 
 main .projects__tag{
