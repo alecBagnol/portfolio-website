@@ -42,7 +42,8 @@ body{
 /* HEADER */
 header{
     display: flex;
-    position: sticky;
+    /* position: sticky; */
+    position: relative;
     top: 0;
     flex-flow: column nowrap;
     width: 46.2rem;
@@ -138,6 +139,9 @@ footer{
 /* MAIN */
 main{
     max-width: calc(100% - (6.4rem + 46.2rem));
+    height: calc(100vh - 6.4rem);
+    overflow-y: auto;
+    padding-right: 2rem;
 }
 /* main .projects{
 } */
@@ -257,4 +261,31 @@ main .projects__item:hover p{
     bottom: 0;
     opacity: .98;
     
+}
+
+
+/* SCROLLBAR */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.055) var(--bgDark);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bgDark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.055);
+    border-radius: 20px;
+    border: 3px solid var(--bgDark);
+    visibility: hidden;
+}
+*:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
 }
