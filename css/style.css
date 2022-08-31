@@ -609,35 +609,30 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
   }
   
   header{
     width: 100%;
+    justify-content: flex-start;
+    padding-top: 7vh;
+    height: calc(100vh - 6.4rem)
   }
   header .contact__links {
     justify-content: flex-start;
     gap: 3vw;
-}
-  main{
-    max-width: 100%;
-    overflow-y: initial;
   }
-  main .projects__container{
-    grid-template-columns: repeat(2,1fr);
-  }
-  
 
-  :root{
-    
-  }
-  main h2 {
-    font-size: 3rem;
-  }
   header h1, header h3{
-    font-size: 7rem;
+    font-size: 6.8rem;
+  }
+  header h3{
+    color: var(--go);
   }
   header h2{
-    font-size: 4.2rem;
+    /* font-size: 4.2rem; */
+    font-size: 8rem;
+    line-height: .6;
   }
   header p{
     font-size: 2rem;
@@ -645,19 +640,42 @@ section {
   header ul li a, header ul li a:visited, header ul li a:link{
     font-size: 1.6rem;
   }
-  main .projects__tag span{
-    font-size: 2rem;
+  header .contact__links a{
+    --size: 8rem;
+  }
+
+  main{
+    max-width: 100%;
+    overflow-y: initial;
+  }
+  main h2 {
+    font-size: 3rem;
+  }
+  main .projects__item{
+    aspect-ratio: 2/1;
+  }
+  main .projects__container{
+    grid-template-columns: repeat(1,1fr);
   }
   main .projects h3{
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
   main .projects p{
     font-size: 1.4rem;
   }
+  main .projects__tag span{
+    font-size: 2rem;
+  }
+
+
+
+  footer{
+    position: fixed;
+    transform: rotate(90deg) translate(-16vh, 40vw);
+  }
+  
   footer p {
     font-size: 1.6rem;
   }
-  main .projects__item{
-    aspect-ratio: 1;
-  }
+  
 }
