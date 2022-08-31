@@ -616,7 +616,8 @@ section {
     width: 100%;
     justify-content: flex-start;
     padding-top: 7vh;
-    height: calc(100vh - 6.4rem)
+    /* height: calc(100vh - 6.4rem); */
+    height: auto;
   }
   header .contact__links {
     justify-content: flex-start;
@@ -628,6 +629,7 @@ section {
   }
   header h3{
     color: var(--go);
+    line-height: .8;
   }
   header h2{
     /* font-size: 4.2rem; */
@@ -642,6 +644,16 @@ section {
   }
   header .contact__links a{
     --size: 8rem;
+  }
+
+  header nav{
+    position: absolute;
+    background-color: var(--bgDark);
+    width: 100vw;
+    opacity: .9;
+    padding-bottom: 5vh;
+    z-index: 10;
+    visibility: hidden;
   }
 
   main{
