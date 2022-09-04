@@ -12,7 +12,8 @@
     font-size: 62.5%;
     box-sizing: inherit;
     font-family: 'JetBrains Mono', monospace;
-    --secondaryFont: 'Asap', sans-serif;
+    --secondaryFont:
+    'Asap', sans-serif;
     --bgLight: #FFF;
     --textLight: #121212;
     --cardBgDark: #FAF4E8;
@@ -28,17 +29,13 @@
     --css: #563D7C;
     --go: #00ADD8;
     --html: #E44D26;
-
     background-color: var(--bgDark);
     color: var(--textDark);
 }
 body{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 3.2rem;
-    gap: 6.4rem;
+    display: block;
+    padding: 0 4vw;
+    margin: 0;
 }
 
 section{
@@ -56,10 +53,11 @@ main h2 {
 /* HEADER */
 header{
     display: flex;
-    position: relative;
+    position: fixed;
     top: 0;
     flex-flow: column nowrap;
     width: 46.2rem;
+    width: 25vw;
     /* height: calc(100vh - 6.4rem); */
     height: 100vh;
     justify-content: center;
@@ -214,10 +212,8 @@ header ul li a.selected::after{
 /* MAIN */
 main{
     max-width: calc(100% - (6.4rem + 46.2rem));
-    /* height: calc(100vh - 6.4rem); */
-    height: 100vh;
-    overflow-y: auto;
-    padding-right: 2rem;
+    max-width: calc(100% - 25vw - 4vw - 1vw);
+    margin-left: auto;
 }
 /* main .projects{
 } */
@@ -234,13 +230,18 @@ main .projects__item{
     flex-direction: column;
     justify-content: space-between;
     grid-column: span 1;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     background-color: var(--cardBgDark);
     border: .4rem solid var(--cardBorder);
     border-radius: 1.2rem;
     box-shadow: .6rem .6rem 0 var(--cardBorder);
     padding: 2.2rem 3rem;
     overflow: hidden;
+}
+main .projects__item::after {
+  content: "";
+  display: block;
+  padding-bottom: 66%;
 }
 main .projects__item picture{
     display: block;
