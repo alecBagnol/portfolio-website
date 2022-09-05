@@ -288,7 +288,7 @@ main .projects__text{
     flex-direction: column;
     z-index: 1;
 }
-main #projects h3{
+main .projects__item h3{
     max-width: 30rem;
     font-family: var(--secondaryFont);
     font-weight: 400;
@@ -301,7 +301,7 @@ main .projects__item:hover h3{
     opacity: 0;
 }
 
-main #projects p{
+main .projects__item p{
     display: block;
     position: absolute;
     width: 100%;
@@ -564,10 +564,10 @@ section {
   main .projects__tag span, main #tech h3{
     font-size: 2rem;
   }
-  main #projects h3{
+  main .projects__item h3{
     font-size: 4rem;
   }
-  main #projects p{
+  main .projects__item p{
     font-size: 1.4rem;
   }
   footer p {
@@ -643,10 +643,10 @@ section {
   main .projects__container{
     grid-template-columns: repeat(1,1fr);
   }
-  main #projects h3{
+  main .projects__item h3{
     font-size: 3.4rem;
   }
-  main #projects p{
+  main .projects__item p{
     font-size: 1.4rem;
   }
   main .projects__tag span, main #tech h3{
