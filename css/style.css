@@ -56,18 +56,24 @@ header{
     position: fixed;
     top: 0;
     flex-flow: column nowrap;
-    width: 46.2rem;
-    width: 25vw;
+    /* width: 46.2rem; */
+    /* width: 25vw; */
+    width: 48rem;
     /* height: calc(100vh - 6.4rem); */
     height: 100vh;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-start;
     padding: 0;
-    gap: 3.2rem;
+    /* gap: 3.2rem; */
 }
-/* header .titles__container{
+header > * {
+  padding-top: 3.2rem;
+}
 
-} */
+header .titles__container {
+  padding-top: 7rem;
+}
+
 header h1, header h3{
     font-size: 7rem;
 }
@@ -103,7 +109,7 @@ header .contact__links{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    /* padding: 0; */
 }
 
 header .contact__links a{
@@ -212,8 +218,9 @@ header ul li a.selected::after{
 
 /* MAIN */
 main{
-    max-width: calc(100% - (6.4rem + 46.2rem));
-    max-width: calc(100% - 25vw - 4vw - 1vw);
+    /* max-width: calc(100% - (6.4rem + 46.2rem)); */
+    /* max-width: calc(100% - 25vw - 4vw - 1vw); */
+    max-width: calc(100% - 48rem - 4vw - 1vw);
     margin-left: auto;
 }
 /* main .projects{
@@ -572,8 +579,11 @@ section {
   main .projects__container{
     grid-template-columns: repeat(1,1fr);
   }
-  main .projects__item{
+  /* main .projects__item{
     aspect-ratio: 2;
+  } */
+  main .projects__item::after{
+    padding-bottom: 50%;
   }
 }
 @media all and (max-width: 1020px){
