@@ -98,7 +98,7 @@ header h3{
     color: var(--go);
 }
 
-header p{
+header p, .about p, .tech p{
     font-size: 2rem;
     font-family: var(--secondaryFont);
 }
@@ -294,7 +294,7 @@ main .projects__item.site:hover picture img{
 main .projects__tag{
     position: relative;
 }
-main .projects__tag span{
+main .projects__tag span, main .tech h3{
     text-transform: uppercase;
     font-size: 2rem;
 }
@@ -366,17 +366,24 @@ main .projects p{
 main .projects__item:hover p{
     bottom: 0;
     opacity: .98;
-    
 }
-footer{
+main .tech__item{
+  padding-bottom: 2rem;
+}
+
+header footer{
   position: absolute;
   bottom: 3.2rem;
-  opacity: .5;
+  
+}
+main footer{
+  display: none;
 }
 footer p {
   font-family: inherit;
   font-weight: 100;
   font-size: 1.6rem;
+  opacity: .5;
 }
 section {
   margin-bottom: 8rem;
@@ -599,13 +606,13 @@ section {
   header h2{
     font-size: 4.2rem;
   }
-  header p{
+  header p, .about p, .tech p{
     font-size: 2rem;
   }
   header ul li a, header ul li a:visited, header ul li a:link{
     font-size: 1.6rem;
   }
-  main .projects__tag span{
+  main .projects__tag span, main .tech h3{
     font-size: 2rem;
   }
   main .projects h3{
@@ -631,20 +638,22 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
+    padding: 0 8vw;
   }
   
   header{
     width: 100%;
+    position: relative;
     justify-content: flex-start;
     padding-top: 7vh;
     /* height: calc(100vh - 6.4rem); */
     height: auto;
+    padding-bottom: 10rem;
   }
-  header .contact__links {
-    justify-content: flex-start;
+  /* header .contact__links {
+    justify-content: space-between;
     gap: 3vw;
-  }
+  } */
 
   header h1, header h3{
     font-size: 6.8rem;
@@ -658,7 +667,7 @@ section {
     font-size: 8rem;
     line-height: .6;
   }
-  header p{
+  header p, .about p, .tech p{
     font-size: 2rem;
   }
   header ul li a, header ul li a:visited, header ul li a:link{
@@ -697,19 +706,34 @@ section {
   main .projects p{
     font-size: 1.4rem;
   }
-  main .projects__tag span{
+  main .projects__tag span, main .tech h3{
     font-size: 2rem;
   }
 
 
 
-  footer{
-    position: fixed;
-    transform: rotate(90deg) translate(-16vh, 40vw);
+  header footer{
+    display: none;
+  }
+  main footer{
+    display: block;
   }
   
   footer p {
     font-size: 1.6rem;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
   }
   
+}
+@media all and (max-height: 420px){
+  header footer{
+    display: none;
+  }
+  header nav{
+    display: none;
+  }
+  main footer{
+    display: block;
+  }
 }
